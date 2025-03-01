@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Nav from "../Components/Nav";
 import Category from "../Components/Category";
 import Card from "../Components/Card";
+import { dataContext } from "../context/UserContext";
 import { food_items } from "../data/food";
+import Footer from "../Components/Footer";
 
 const Home = () => {
-  let [Cate, setCate] = useState(food_items);
+  let { Cate, setCate } = useContext(dataContext);
 
   function filter(category) {
     if (category === "All") {
@@ -32,6 +34,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };
