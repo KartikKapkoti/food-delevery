@@ -5,9 +5,10 @@ import Card from "../Components/Card";
 import { dataContext } from "../context/UserContext";
 import { food_items } from "../data/food";
 import Footer from "../Components/Footer";
+import Cart from "../Components/Cart";
 
 const Home = () => {
-  let { Cate, setCate } = useContext(dataContext);
+  let { Cate, setCate, input } = useContext(dataContext);
 
   function filter(category) {
     if (category === "All") {
@@ -34,6 +35,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <Cart/>
       <Footer/>
     </div>
   );

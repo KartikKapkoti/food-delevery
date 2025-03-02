@@ -6,7 +6,7 @@ import { dataContext } from "../context/UserContext";
 import { food_items } from "../data/food";
 
 function Nav() {
-  let { input, setInput, setCate } = useContext(dataContext);
+  let { input, setInput, setCate ,showCart, setShowCart } = useContext(dataContext);
 
   // Filter food items based on input value (Search functionality)
   useEffect(() => {
@@ -37,7 +37,7 @@ function Nav() {
         />
       </form>
 
-      <div className="group w-[60px] h-[60px] bg-white flex justify-center items-center rounded-md shadow-lg relative cursor-pointer transition-all duration-700">
+      <div className="group w-[60px] h-[60px] bg-white flex justify-center items-center rounded-md shadow-lg relative cursor-pointer transition-all duration-700" onClick={()=>{setShowCart(true)}}>
         <IoCart className="w-[35px] h-[35px] text-gray-700 group-hover:text-green-400 group-hover:scale-110 transition-transform duration-700" />
         <span className="absolute top-0 right-2 font-bold text-green-400">0</span>
       </div>
