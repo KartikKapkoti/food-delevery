@@ -17,7 +17,7 @@ function Category({ filter }) {
           className={`w-[100px] h-[100px] rounded-md shadow-lg flex flex-col items-center justify-center cursor-pointer transition-all duration-200 active:scale-90 
           ${
             selectedCategory === item.name
-              ? "bg-green-400 text-white" 
+              ? "bg-green-400 text-white"
               : "bg-white hover:bg-green-300 text-gray-900"
           }`}
           onClick={() => handleClick(item.name)}
