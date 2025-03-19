@@ -1,5 +1,8 @@
 # Food Delivery Application
 
+## Live link
+https://foodie-kartik-kapkoti.netlify.app/
+
 ## Project Description
 
 This is a food delivery application built with React and Redux. The application allows users to browse food items, add them to their cart, and manage the cart items. The application also includes features such as category filtering and item quantity management.
